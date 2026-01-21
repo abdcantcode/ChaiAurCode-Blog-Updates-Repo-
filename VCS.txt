@@ -1,0 +1,75 @@
+1) Project code grows over time.
+
+A needs help with a feature he won't be able to implement on his own
+He needs to zip it puts it in a pendrive and gives it to B
+B makes the changes and hands it over back to A.
+
+Now the issues to be faced in this approach are as follows:
+1) A after receiving the file isn't aware of the changes made to 
+the code.
+
+2) The source of truth previously held by either of the parties A
+or B needs to be held or deleted.. we will look at it later on 
+
+3) In case the party B recognises he has made a mistake in the code
+it wont be reflected in the code which is with A
+
+4) A will have to hand over the pen-drive back to B and to and fro
+continues until the project cycle ends.
+
+5) Both the parties A and B have to wait until they get handed 
+over the pendrive.
+
+6) If not so and they tend to make updates on their own, it may 
+lead to merge conflicts and out of sync issues
+
+7) No collaboration exists.
+
+Not coding at the same time leads to issues so the pendrive is 
+passed..
+
+8) The number of people increase
+
+
+
+The issues are now of Changes made
+and the other is of collaboration
+
+
+
+
+
+
+For this suppose we have made a code tracker, it tracks changes**
+Once installed on the pendrive it keeps track of the changes made 
+by A, B and C.
+Now the changes can be reverted in case there is an issue.
+This doesnt resolve the collaboration issue
+
+
+For this we need something that is a single source of truth and 
+everyone has access to it...
+
+The Code tracker initially installed on a pendrive is now moved
+to that single source of truth that is the...server as we say
+
+So the server resolves collaboration 
+where as the code tracker resolves the issue of tracking the changes
+
+So now git is the tracker and github is essentially the server 
+hosting git 
+
+We have other stuff like github, bitbucket, git lab, git tea, 
+our domain-> These are all those that host git, git is actually 
+a version control system 
+
+Can git be used locally -> YES
+
+Using git locally -> helps track code changes as of today
+Git was made essentially for local changes.
+
+We have other alternatives as well like mercurial, subversion etc as well
+
+VCS Remote or Remote is Github, aws code commit, git tea, bit bucket
+
+VCS is Git 
