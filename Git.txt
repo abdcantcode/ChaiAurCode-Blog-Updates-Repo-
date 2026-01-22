@@ -1,0 +1,94 @@
+How does Git Track changes.?
+Suppose you have an empty js file, you proceed to add 
+let name='Abdullah';
+
+so how does git track that changes internally.?
+
+for let name='Abdullah';
+it does something like +let name='Abdullah';
+
+you now removed the name making it 
+name='';
+So what git does is
+it does something like -const name='Abdullah'
+and then +const name='';
+
+But where do we store this code.?
+->Postgres, yes
+->MySQL yes
+but in a text file.?
+yes as well...
+But, user shouldnt be able to change that file as well.. that is the challenge tho 
+
+so we dont need any db or anything of that sort thats good ig 
+
+okay so to basically make git track your project or to have that tracking kinda file in your repo, you run the command git init
+
+now to have a look at the files in the folder you run the ls command
+but .git is a folder thats hidden so you run the ls -a command
+
+This .git should not be tampered with 
+you can tamper it tho
+
+now tracking the changes:
+-> you can go character by character
+ or go line by line 
+ or function by function or so on
+
+ but the control of what to track is given to the user 
+ git add <Filename>
+
+ this makes the files changes to be ready to be tracked not tracked this is the thing to be considered
+
+to now move those changes to .git you need the git commit -m " "
+
+rm -rf .git to remove that folder
+
+(USE THE CHEF BY YOUR SIDE ANALOGY THAT IS CRAZY )
+
+git log tells about your history
+
+git init bolto tum khaali apne baazu bawa ku bulaaleke khada kare
+git add bolto tum unke saamne kuch harkat karre jo uno bas observe karre types
+then git commit se uno action lete samjho 
+
+when a commit is made 
+git log tells you: (It only shows stuff upon commits )
+the commit id
+the author
+the date
+and the commit message
+
+git status tells if the file is modified or not after the commit last made or a new file is added and changes like that
+
+In vs code the folder with . is hidden 
+
+git init se bas .git file banti aisa samjo jab tum padhne baithre jab ek note nikaal leke baithre
+git add . ka matlab kya ki hi topics yaad karlere as in changes track karlere
+git commit -m "" aisa hai jaisa tum woh changes ku save karlere .git mein as in tum notes mein likhlere
+
+git diff tells you the difference after the previous commit if used individually
+
+but when used with git diff <commitid1> <commitid2>
+tells you the difference between the two commits
+
+add moves things to staging area to make them ready for changes to be tracked
+
+Each commit has an hash associated with it 
+Every hash a reference of its previous hash cuz the latter hashes only have the changes 
+The latest commit is known as HEAD.
+
+git log --oneline gives you the log in one line 
+
+How to change the last commit 
+We can make a commit that reverses whats done in the last commit?
+Yes to do so like last commit mein x add huwa toh usku nikaaldo and x nikalagaya toh usku add kardo
+basically
+git revert <last commit ka hash> ya id 
+you get one more commit while having the last commit in which you might have accidentally shipped a bug
+
+other way is to move the head back to the commit prior to the bug that was shipped
+for that
+git reset --hard <hash>
+Here you cant go back unlike git revert 
+
