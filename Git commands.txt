@@ -92,3 +92,15 @@ for that
 git reset --hard <hash>
 Here you cant go back unlike git revert 
 
+git reset --hard 1 sabse pehle waale pe aajata
+git reset 1 changes ku poore staging area mein daldeta you can commit them if you want 
+
+git commit -am ""
+works when you havent moved stuff to staging area matlab add aur commit everything 
+its basically git add. 
+git commit -m "hello"
+
+feature.txt (u)
+featuere.html (m)
+in this case only the modified files are committed 
+

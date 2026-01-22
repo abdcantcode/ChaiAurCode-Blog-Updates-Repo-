@@ -27,3 +27,4 @@ commit message
 prev node address
 tree and parent and then you enter that of the previous node... and so on until you find the node with no parent and that is the first commit you made 
 
+config file stores configurations 
