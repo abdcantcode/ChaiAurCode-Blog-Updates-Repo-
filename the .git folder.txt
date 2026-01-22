@@ -1,0 +1,29 @@
+.git folder is essentially there to track the changes that you make and is created once you use the git init command in your repository.
+The branch you use by default is named as main 
+
+git branch command tells you about the branches you have 
+along with the branch you are on with a *
+
+*main is the current branch you are on 
+the HEAD folder has the pointer to your current branch
+not the last commit you made
+and not the main branch as well
+
+cat HEAD gives you the content of the file 
+refs/heads/main so it tells you your current branch 
+
+Now HEAD has your current branch and if you want to know the last commit on your current branch you need to have a look at the refs file
+so once you go it in you get heads and tags 
+once you go in heads you get main which is your current branch 
+once you cd in main you get the hash id of your main/current branch 
+
+So if you want to know the last commit:
+
+so head is the pointer to the branch that is the current branch and it is stored in HEAD and from there we deduce the current branch that is main in the simple case and then to know the last commit we made we go to the refs/heads/main (the current branch) in our case which tells us the commit hash of the last commit thereby made on the current branch and then to know the actual contents of the commit you go to the objects file which has the initial 2 words of the commits that thereby exit and once you go in the commit like for eg you have 2b2b342342 as the last commit you made you go into the folder 2b to find folders like 2b34... and etc and then once you cat it you get an unreadable text you come out of all of it and type 
+git cat-file -p <commit has> to get
+Changes 
+author
+commit message
+prev node address
+tree and parent and then you enter that of the previous node... and so on until you find the node with no parent and that is the first commit you made 
+
