@@ -1,0 +1,88 @@
+The two cases when git init isnt run
+git status fails when .git is not created
+ls -a doesnt find .git 
+
+after git init, the file isnt tracked by default, for it to 
+work git add filename is run
+it goes from U to A
+
+.git has Local Commit History
+
+even for a new line the changes are recorded.
+
+You should leave one line after the last line you have ended.
+
+Write commits as a present tense
+
+Commits have the changes that were there for the previous commit 
+plus the previous commit hash
+
+Manual commit and comments via AI
+
+Now you can push the .git to remote and pull from it 
+
+Locally-folder
+Remotely-Repository
+
+git remove -v checks if this repo is associated with a remote
+
+git remote add origin githubrepo-link
+
+git remove -v after that gives the name origin it points to that github repo link
+
+git push -u origin main 
+
+upstream is u origin main is the branch name
+upstream is the repo where the code is present 
+
+
+git clone <repo-url> + Sets remotes automatically
+to check if remotes are set or not 
+
+Once you clone a repo, the commits you make are not reflected at the origin
+Upon doing git status on your local you can tell the differences
+
+You can't push anything you want to someones repo, collaborators should be added
+
+Forking a repo moves it to my acc making a repo
+You can make push changes to this repo though now
+
+git remote set-url origin <repo-url>
+
+i have 191 commits the guy whom i forked from has 190 commits
+
+Creating a pull request
+Once created they can be merged or closed (Till then its an open PR)
+so now 191+1 merge commit added as well 
+
+main was previously master
+default track is known as main 
+
+Its better to have a side branch when changes are being made it comes out from the head
+
+you make a commit next to head which has all the commits of the side branch and commit it 
+
+
+git checkout -b 'feat/a' makes a branch and shift it to feat/a
+git checkout main 
+
+go to main type git merge feat/a
+
+git merge --squash feat/a
+
+git push --
+
+when squash and merge is done...
+your local may lack behind remote then you do git pull...
+
+main 
+staging -> testing, marketing, qa engineers
+
+production
+
+approach 1 : squash on the side branch
+approach 2
+
+git rebase main (feature branch ko main se rebase kardena) in case of every commit 
+upon rebase the commit ids of the side branches change...
+then main ke andar feature branch ko merge karo 
