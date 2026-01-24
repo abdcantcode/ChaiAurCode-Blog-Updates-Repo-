@@ -83,6 +83,9 @@ production
 approach 1 : squash on the side branch
 approach 2
 
+
 git rebase main (feature branch ko main se rebase kardena) in case of every commit 
 upon rebase the commit ids of the side branches change...
 then main ke andar feature branch ko merge karo 
+
+
