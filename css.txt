@@ -1,0 +1,251 @@
+Why CSS Selectors are needed?
+Before we move to the topic, let us consider a youtuber named 'Abdxllah72' having 100k subscribers
+hosting an iPad giveaway to his subscribers, consider the elements on your website
+as his subscibers. What he he says "All my subscibers get the giveaway prize" it indirectly implies selecting all the elements on the website
+what if he says only the subscribers of mine who have been following me for more than 7 years receive the giveaway prize... It feels more targetted
+
+Considering the way the youtuber targetted a few of his 
+subscribers to be the winners of his giveaway , CSS selectors 
+the same way are used to target HTML elements on a webpage to which style rules 
+are to be applied (or) in simple terms they are used to select the
+html element to be styled
+youtuber -> CSS Selector
+
+The general syntax of a selector:
+selector{
+	property:value;
+}
+
+The CSS Element Selector:
+It is used to select all the elements of a given type
+p{
+	color:pink
+}
+It translates to All the elements of type <p> should be of the 
+color pink
+
+*When to use:
+Use this when you want all the elements of that type to have the same
+style.
+
+Class selector:
+It is used to select html elements that share the same class attribute
+to style such elements, (.)period character
+ is followed by the classname and then the
+style is applied.
+.hazardous{
+	color:red;
+}
+
+*It is used when you want to assign common styles to elements 
+which may differ in element type as well
+
+
+ID Selector:
+It is used to select html elements based on the id attribute
+to select an element with a specific id, we write # followed by
+the id of the element
+No two elements even of the same type can have the same id, so 
+id selector is used to style unique elements.
+
+Class vs ID Selector:
+
+Sometimes you want want to style multiple elements the same way
+like all the p's and all the h4's have the same color
+this is when the grouping selector comes into play
+instead of writing ....
+we write all the selectors comma separated
+when to use:
+when styling multiple elements
+
+Now what if you want the button only inside the emergency panel of 
+your app to be red and green else where, here is when descendant 
+selectors come into play they are used to target elements inside
+other elements
+only buttons inside div should be read
+div p{
+}
+
+More specific rules override general ones
+Suppose 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 1. How Git Works Internally?
+
+We are aware of the fact that Git is a Version Control System. But how does it work internally is the real question.
+
+Before we jump to the internal working of Git or any VCS in general, let us think of an approach on how would someone be tracking changes. Suppose you have the following in `file.txt`:
+
+```jsx
+Abdullah
+
+```
+
+We would need to keep something that keeps track of the folder creation `file.txt` as well as the content of `file.txt`. Furthermore, if we make the changes as follows:
+
+```jsx
+AbdulAziz
+
+```
+
+We would need to track the deletion of the name previously written and then the updation thereby made.
+
+In order to keep track of these changes, we might need a database, right? But can this be done in a simpler way though? Can we be creating a file that keeps track of all these changes? That is what Git does internally. It creates a folder named `.git` which keeps track of those changes.
+
+But initially, you need to run the command:
+
+```bash
+git init
+
+```
+
+…for the `.git` folder to be created.
+
+So, as of now, Git is a distributed Version Control System that keeps track of your content, not your folders, in the form of snapshots, which we will be discussing later on. The main thing being that the above example was only an analogy, Git doesn’t record individual changes, but records how a file looks like at each point in time.
+
+# 2. Understanding the .git folder
+
+The `.git` folder is the folder that makes your folder a Git repository. If the `.git` folder is deleted, the history of changes made to that particular repository is deleted as well. Okay, so what does the `.git` folder contain?
+
+![image.png](attachment:5a2e09a4-e88b-4f1c-b797-17250428c25e:image.png)
+
+It contains the following:
+
+1. HEAD → It is a pointer to the current branch. It eventually leads you to the last commit.
+2. objects/ → It stores all the git objects (Files as Blobs, Directories as Trees and commits as Snapshots).
+3. refs/ → It stores pointers to branches and tags.
+4. index → The staging area.
+5. config → Repository specific Configurations.
+
+and more…
+
+# 3. Git Objects: Blob, Tree, Commit
+
+After the `git init` command, you generally get started with your task. Going back to the example of `file.txt` (starting initially with name as **Abdullah**) as used in Section 1. Now `git init` solely doesn’t keep track of your files, you need to specify the files that have to be kept track of. So, you proceed to run the command for it, i.e.,
+
+**`git add file.txt`**
+
+### **What happens now?**
+
+A **Blob** is created for the contents of the file, i.e., *Abdullah*, in the form of a hash named **SHA-1** (it creates a **40-digit hexadecimal code** for contents of `file.txt`) and stores it in **`.git/objects/`**.
+
+### **Having a look at the blob object for the `file.txt` that we created:**
+
+1. Moving into the `.git` folder.
+2. Moving into the `objects` folder.
+3. Using `ls` to list out the objects.
+4. You find `4b` (it is for the empty Git tree created by default) and `d9`, which is essentially the first 2 digits of the hash for the content in `file.txt`.
+5. To get the remaining 38 digits, you move deeper into `d9`. Since now you get the 40-digit SHA-1 for `file.txt`’s content. Let’s have a look at the contents of that hash.
+
+![image.png](attachment:88dd5258-8e90-486a-a2f5-dd26a6d4790a:image.png)
+
+1. To have a look at its content as well as its type, lets run the following commands:
+
+![image.png](attachment:9145ca98-5160-4089-b304-e52d9b8c69d2:image.png)
+
+### **But the issue here is that Blob doesn’t know the following:**
+
+- The author
+- The history
+- The folder name, etc.
+
+To resolve these issues, we have **tree** and **commit** objects. These are created once we run the **`git commit`** command.
+
+### **Trees**
+
+Trees contain a snapshot of the directory in simple terms, but if want to dive deeper, it contains the following:
+
+1. References to the blobs.
+2. References to the subtrees / sub-directories.
+3. File names.
+4. File permissions.
+
+### **Having a look at the tree object for the `file.txt` upon commit:**
+
+- As we can see, it has `100644` (the file permissions), reference to the blob, and the file name.
+
+![image.png](attachment:8319c567-ee32-48a1-b4e2-a8e7ffafd8e8:image.png)
+
+Although trees resolve a few issues, they don’t specify the things that a commit specifies.
+
+### **Commit**
+
+The commit specifies the following:
+
+- The root tree.
+- The parent.
+- The author.
+- The committer.
+- The commit message.
+
+Having a look at the commit object for the `file.txt`:
+
+![image.png](attachment:2f2a63d9-7243-4590-a46d-ac843bf52df8:image.png)
+
+# 4. How Git Tracks Changes?
+
+Git doesn’t track lines, it tracks **snapshots**.
+
+Considering the example of `file.txt`, if the content gets changed to `AbdulAziz`, now once you run the `git add` command along with the `git commit` command, the following happens:
+
+1. The content in the **index (staging area)** is compared with the previous commit (**AbdulAziz** is compared with **Abdullah**), which essentially implies comparing the previous **blob** with the current **blob**.
+2. The previous **blob** is not modified or deleted.
+3. The new **tree object** points to the new **blob**.
+4. The new **commit object** is created that points to the new **tree**.
+5. The new commit stores a reference of the previous commit as its **parent**.
+
+# Why does the .git/ folder exist?
+
+Consider the `.git` folder as the key to the lock named **Version Control**.
+
+Without `.git`, Git has nothing to track. Git needs a place to store:
+
+- Versions of the file.
+- Commits made to the file.
+- Branches, tags, and history.
+- Configuration and all.
+
+# Why happens during git add and during git commit?
+
+### During `git add`:
+
+A **blob object** is created for the files, and the **index** is updated to point to this blob.
+
+### During `git commit`:
+
+Git collects all the staged **blobs**, thereby making a **tree object**, and further creates a **commit object** that:
+
+- Points to the **tree object**.
+- Points to the **previous commit**.
+- Contains **metadata**.
+
+It also updates the **branch pointer** to move to the next commit.
+
+# How Git uses hashes to ensure integrity?
+
+**Hashes** ensure **integrity** and **trust** by the following:
+
+- They **detect accidental changes**.
+- Keep track of **history efficiently**.
+- Avoid **duplication**.
