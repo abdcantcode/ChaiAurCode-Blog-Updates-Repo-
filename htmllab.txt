@@ -58,3 +58,295 @@ to make an image clickable a inside <img>
 </picture>
 
 *Gallery of images done
+
+<ul>
+      <li></li>
+</ul>
+
+similarly for ol as well
+<ul>
+      <li>Fruits
+      <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+      </ul>
+      </li>
+</ul>
+
+ul cant have a direct ul as child...
+
+dl-> container
+dt-> title 
+dd-> description
+
+<ol start="5" type="A">
+      <li>Apple</li>
+      <li>Apple</li>
+      <li>Apple</li>
+    </ol>
+
+start and type attributes...
+
+*list archives done
+
+<table>
+      <tr>
+        <td>C1R1</td>
+        <td>C2R1</td>
+        <td>C3R1</td>
+      </tr>
+      <tr>
+        <td>C1R2</td>
+        <td>C2R2</td>
+        <td>C3R2</td>
+      </tr>
+      <tr>
+        <td>C1R3</td>
+        <td>C2R3</td>
+        <td>C3R3</td>
+      </tr>
+    </table>
+
+    using thead and tbody with th and tr and td<table>
+  <thead>
+  	<tr>
+      <th>Professor</th>
+      <th>Subject</th>
+      <th>Duration</th>
+    <tr>
+  </thead>
+  <tbody>
+  	<tr>
+    	<td>Hitesh Sir</td>
+        <td>JS</td>
+        <td>1 Day</td>
+    <tr>
+    <tr>
+    	<td>Piyush Sir</td>
+        <td>CSS</td>
+        <td>2 Day</td>
+    <tr>
+  </tbody>
+</table>
+
+
+caption tag
+<table>
+	<caption>Course Information</caption>
+  <thead>
+  	<tr>
+      <th>Professor</th>
+      <th>Subject</th>
+      <th>Duration</th>
+    <tr>
+  </thead>
+  <tbody>
+  	<tr>
+    	<td>Hitesh Sir</td>
+        <td>JS</td>
+        <td>1 Day</td>
+    <tr>
+    <tr>
+    	<td>Piyush Sir</td>
+        <td>CSS</td>
+        <td>2 Day</td>
+    <tr>
+  </tbody>
+</table>
+
+
+th and td can have colspan attribute
+<table>
+	<caption>Course Information</caption>
+  <thead>
+  	<tr>
+      <th>Month</th>
+      <th>Spending</th>
+      
+    <tr>
+  </thead>
+  <tbody>
+  	<tr>
+    	<td>Jan</td>
+        <td>100</td>
+       
+    <tr>
+    <tr>
+    	<td>Feb</td>
+        <td>200</td>
+        
+    <tr>
+    <tr>
+    	<td colspan="2">Sum:300</td>
+        
+    <tr>
+  </tbody>
+</table>
+
+<table>
+	<tr>
+    	<th>Name</th>
+        <th>Age</th>
+        <th>Skill</th>
+    </tr>
+    <tr>
+    	<td>Abdullah</td>
+        <td rowspan="3">28</td>
+        <td>None</td>
+    </tr>
+    <tr>
+    	<td>Abdullah</td>
+        
+        <td>None</td>
+    </tr>
+    <tr>
+    	<td>Abdullah</td>
+        
+        <td>None</td>
+    </tr>
+    
+</table> 
+rowspan
+
+
+<table border="1">
+	<colgroup>
+      <col style="background-color:red;"> 
+      <col style="background-color:blue;"> 
+      <col style="background-color:purple;"> 
+    </colgroup>
+	<tr>
+    	<th>Name</th>
+        <th>Age</th>
+        <th>Skill</th>
+    </tr>
+    <tr>
+    	<td>Abdullah</td>
+        <td rowspan="3">28</td>
+        <td>None</td>
+    </tr>
+    <tr>
+    	<td>Abdullah</td>
+        
+        <td>None</td>
+    </tr>
+    <tr>
+    	<td>Abdullah</td>
+        
+        <td>None</td>
+    </tr>
+    
+</table>
+ colgroup to group columns to assign styles...
+
+ <table border="1">
+	<colgroup>
+      <col style="background-color:red;"> 
+      <col style="background-color:blue;"> 
+      <col style="background-color:purple;"> 
+    </colgroup>
+    <thead>
+	<tr>
+    	<th>Name</th>
+        <th>Age</th>
+        <th>Skill</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    	<td>Abdullah</td>
+        <td rowspan="2">28</td>
+        <td>None</td>
+    </tr>
+    <tr>
+    	<td>Abdullah</td>
+        
+        <td>None</td>
+    </tr>
+    
+    </tbody>
+    <tfoot>
+    <tr>
+    	<td>Abdullah</td>
+        <td rowspan="3">29</td>
+        <td>None</td>
+    </tr>
+    </tfoot>
+    
+    
+</table>
+tfoot as well
+
+example <table>
+	<colgroup>
+    	<col style="background-color:pink;">
+        <col style="background-color:red;">
+        <col style="background-color:yellow;">
+        <col style="background-color:blue;">
+    </colgroup>
+    <thead>
+    	<tr>
+        	<th colspan="2">
+            	Full Name
+            </th>
+            <th>
+            	Course
+            </th>
+            <th>
+            	Fees
+            </th>           
+        </tr>
+    </thead>
+    <tbody>
+    	<tr>
+        	<td>
+            	Abdullah
+            </td>
+            <td>
+            	Aajaz
+            </td>
+            <td>
+            	JS
+            </td>
+            <td>
+            	100
+            </td>
+        </tr>
+        
+        <tr>
+        	<td>
+            	Aalam
+            </td>
+            <td>
+            	Patil
+            </td>
+            <td>
+            	CSS
+            </td>
+            <td>
+            	150
+            </td>
+        </tr>
+        
+    </tbody>
+    <tfoot>
+    <tr>
+        	<td>
+            	Harshit
+            </td>
+            <td>
+            	Rana
+            </td>
+            <td>
+            	Nalla
+            </td>
+            <td>
+            	250
+            </td>
+        </tr>
+        
+    </tbody>
+    </tfoot>
+<table>
+
+*Data tables done
