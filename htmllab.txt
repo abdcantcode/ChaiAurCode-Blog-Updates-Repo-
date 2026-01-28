@@ -20,3 +20,13 @@ The title tag
 
 *Done with the foundation 
 
+Semantic tags: Tags that tell you what they do via their name like <strong>
+<b> and <strong> have no visual differences.
+
+Better to write b inside p not b inside b
+
+similarly emphasis tag em is semantic and i isnt semantic
+
+To break add line break in p tag we can use br tag and we are aware of the hr tag
+
+* Done with the text scrolls part.
