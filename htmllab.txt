@@ -30,3 +30,13 @@ similarly emphasis tag em is semantic and i isnt semantic
 To break add line break in p tag we can use br tag and we are aware of the hr tag
 
 * Done with the text scrolls part.
+
+<a href="url">content</a>
+target="_blank" takes you to a new tab
+href="mailto:abdullah72ftw@gmail.com" opens the email client to send an email to abdullah72ftw@gmail.com
+
+<a href="#section2">Section 2</a> navigates you the the element with id #section1
+
+<a href="" download></a> downloads the thingy..
+
+* Linking portals done 
