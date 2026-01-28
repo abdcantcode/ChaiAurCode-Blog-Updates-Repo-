@@ -1,0 +1,22 @@
+Doctype is specified as 
+<!DOCTYPE html>
+
+Html, head and body tags
+<html>
+  <head>
+  </head>
+  <body>
+  </body>
+</html>
+
+The title tag
+<html>
+  <head>
+  <title>Title</title>
+  </head>
+  <body>
+  </body>
+</html>
+
+*Done with the foundation 
+
