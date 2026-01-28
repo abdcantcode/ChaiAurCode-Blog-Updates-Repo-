@@ -40,3 +40,21 @@ href="mailto:abdullah72ftw@gmail.com" opens the email client to send an email to
 <a href="" download></a> downloads the thingy..
 
 * Linking portals done 
+
+<img src="logo.png" alt="Logo"> image tag
+height and width attributes
+as height=100 and width=200
+to make an image clickable a inside <img>
+
+<figure>
+  <img>
+  <figcaption>Caption for the figure</figcaption>
+</figure>
+
+<picture>
+  <source media="(min-width: 1024px)" srcset="image-large.jpg">
+  <source media="(min-width: 600px)" srcset="image-medium.jpg">
+  <img src="image-small.jpg" alt="A scenic landscape">
+</picture>
+
+*Gallery of images done
