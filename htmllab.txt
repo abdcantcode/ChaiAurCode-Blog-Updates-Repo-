@@ -350,3 +350,129 @@ example <table>
 <table>
 
 *Data tables done
+
+<Form>
+</form>
+
+In label for should be equal to the elements id
+<form>
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+      <br>
+      <input type="submit">
+    </form>
+
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name">
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+
+
+
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email">
+      <br>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password">
+<br>
+<br>
+      <label for="number">Number:</label>
+      <input type="number" id="number">
+<br>
+<br>
+      <label for="date">Date:</label>
+      <input type="date" id="date">
+    </form> 
+    form with all input types...
+
+text area 
+<label for="feedback">Feedback:</label><br>
+    <textarea rows="10" cols="50" id="feedback">
+    </textarea>
+
+Radio buttons should have the same name 
+<label for="male">male</label>
+      <input type="radio" name="gender" id="male">
+      <br>
+      <label for="female">female</label>
+      <input type="radio" name="gender" id="female"
+
+checkboxes
+<label for="saturday">saturday</label>
+      <input type="checkbox" name="gender" id="saturday">
+      <br>
+      <label for="sunday">sunday</label>
+      <input type="checkbox" name="gender" id="sunday">
+
+<select name="cars" id="cars">
+        <option value="Volvo">Volvo</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+      </select> select has option with value and a label is used
+
+      <form>
+      <label for="name">Name:</label>
+      <input type="text" required placeholder="Enter your name">
+      <br><br>
+      <label for="Email">Email:</label>
+      <input type="text" required placeholder="Enter your Email">
+    </form> required and placeholder
+
+
+<label for="name">name:</label>
+      <input type="text" id="name" maxlength="10">
+      <br><br>
+
+      <label for="number">Rank out of 10:</label>
+      <input type="number" id="number" min="5" max="10">
+      <br><br>
+
+      maxlength, min and max for text and numbers
+      pattern="(?=.*\d)[A-Za-z\d]{6,12}" for password 
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+ for email
+
+
+ <form>
+      <label for="file-upload">File Upload</label>
+      <input type="file" id="file-upload" 
+      accept=".jpg,.jpeg,.png,.pdf"
+    multiple
+    required>
+      <button type="submit">Upload</button>
+    </form> for file upload
+
+
+    <label for="browser"> Choose your browser:</label>
+    <input id="browser" type="text" list="browser-list" placeholder="Start typing lil bro">
+    <datalist id="browser-list">
+      <option value="Chrome">
+      <option value="Safari">
+        <option value="Mozilla">
+
+    </datalist>
+  </body> 
+
+  input and datalist get linked by link and id 
+  <option value="Chrome"></option>
+      <option value="Safari"></option>
+        <option value="Mozilla"></option> can also be written
+
+        <form action="/submit-form" method="post">
+  
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br><br>
+
+  <button type="submit">Submit</button>
+
+</form> 
+action is used
