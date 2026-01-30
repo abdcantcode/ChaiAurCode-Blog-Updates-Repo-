@@ -476,3 +476,15 @@ checkboxes
 
 </form> 
 action is used
+
+
+
+
+Semantics: 
+* <header> and <footer>
+* <nav> tag
+* <main> tag
+* <article> tag -> comes inside article
+* section also comes in main generally after article
+* aside not a part of main
+* time has datetime attribute this is the format 2026-01-30T14:30
