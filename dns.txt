@@ -1,0 +1,90 @@
+* The internet came in the 1970s, whereas the World Wide Web came in the 1990s.
+* The internet is not basically the WWW; they are different things.
+* A network, in simple terms, is essentially computers plus wireless connections and some rules, which are known as protocols.
+* When two computers communicate with each other, that essentially forms a network.
+* A combination of multiple networks is called the internet.
+* So, the internet is essentially a globally connected network that follows some protocols.
+* The internet is different from the World Wide Web.
+* Consider two computers joined via the internet.
+* Suppose the bridges connecting those two computers are the internet.
+* Suppose the internet is a library.
+* The library consists of multiple books.
+* These books consist of multiple pages.
+* The one reading the page is essentially the browser, not the user.
+* Data is also known as payload.
+* Computers communicate with each other using a path, which is known as the internet.
+* The thing being sent from one computer to another is data or payload.
+* We have two computers on either end.
+* We have a road in between known as the internet.
+* Data is being sent from one computer to another.
+* The one driving that data is essentially the browser.
+* The computer on the first end is the client.
+* The computer on the other end is the server.
+* We have the data as well as the internet.
+* This data is sent in the form of bits.
+* How many such data packets can flow through the network or the internet is known as network bandwidth.
+* Since we are sending data from the server to the client, suppose the client is a friend of yours.
+* Your friend will have an address as well as a room number.
+* The address acts as the IP address.
+* The room number acts as the port number.
+* There are 65,535 ports.
+* Just like in your friend’s house there can be multiple rooms, similarly on a single machine with a single IP address, there may be many port numbers.
+* Many software applications might be running on those different port numbers.
+* The one who provides the internet is essentially the ISP.
+* How does your browser open ChatGPT.com?
+* ChatGPT.com is essentially a computer which acts as a server.
+* That server also has an IP address.
+* How does your browser know about the IP address of ChatGPT.com?
+* This is done using DNS.
+* DNS essentially converts IP to name and name to IP.
+* Sometimes a server moves from Vercel to Netlify or from Netlify to Vercel.
+* Vercel and Netlify have different IP addresses.
+* DNS still knows that the IP has changed.
+* What is decentralization?
+* What is loose coupling?
+* What is delegation?
+* DNS is independent of the protocol you are using, like HTTP.
+* DNS does not know the website.
+* DNS does not know the HTML you are writing.
+* At the core, it seems like DNS tells you the IP address.
+* Actually, DNS tells you who you should talk to next.
+* First, you go to a website like ChatGPT by typing it into your browser.
+* Then the root DNS comes into the picture.
+* There are 13 root DNS servers in the world.
+* There are around 1750 physical instances of these root servers.
+* When you go to the root server, it tells you whom to talk to next.
+* It gives you the address of the TLD, which is the top-level domain.
+* In this case, the TLD is .com.
+* After that, the TLD server comes into the picture.
+* Since we already know about .com, we now want to know about ChaiCode.com.
+* It is not ChatCota or anything else; it is specifically ChaiCode.com.
+* To get information about ChaiCode, the request goes to the authoritative DNS server.
+* The authoritative DNS server is responsible for that domain.
+* Companies like Netflix, WhatsApp, and others have authoritative DNS servers.
+* These servers are authorized to tell the IP address of the domain.
+* The browser says it wants to call this function or access this domain.
+* There is something known as a recursive DNS server.
+* The browser only communicates with the recursive DNS server.
+* The browser does not directly communicate with the root server.
+* The browser does not directly communicate with the TLD server.
+* The browser does not directly communicate with the authoritative server.
+* The recursive DNS server communicates with all of them on behalf of the browser.
+* There is something known as cache.
+* If a website was accessed recently, we do not repeat the entire DNS resolution process.
+* For this reason, we maintain cache.
+* Authoritative servers provide DNS records.
+* These records tell how data should be transferred and where to go.
+* These records are known as DNS records.
+
+ping -c 2 google.com
+dig google.com ns
+dig google.com
+dig com ns
+dig . ns
+dig google.com ns
+curl ascii.live/forrest
+curl wttr.in
+
+
+Okay, given by your promoter from CoreID or something like that, okay, if your name server is Netlify, the authority of the server becomes Netlify.dig com ns helps with the name servers of com.If you do dig dot followed by NS, you get the root servers. Am I right or not?dig Google.com for the authoritative servers of Google.com.What is IPConfig?What is IFC command and what is STOP command?UPtimeWho am I, Kamal?
+
