@@ -249,3 +249,9 @@ It also updates the **branch pointer** to move to the next commit.
 - They **detect accidental changes**.
 - Keep track of **history efficiently**.
 - Avoid **duplication**.
+
+Caught up on all the blogs finally
+Check them out here: https://abdxllahblogs.hashnode.dev/
+
+6 hours of progress, not my best day
+Tomorrow we go harder

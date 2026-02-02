@@ -1,0 +1,210 @@
+font-weight:bold;
+font-size:32px;
+
+Padding ku element ku dete uney uske andar jagah banaleta for the element inside it 
+Margin targetted element ke baher jagah banata
+
+Without box-sizing border box -> Elements width = width + border + padding (not margin) (CONTEXT BOX)
+With it -> Elements width = width given all the others fit into it reducing the actual elements width
+
+padding: top right bottom left;
+line-height:1.5 (not px) -> Creates space between lines.
+letter-spacing:1px; -> Creates spacing between letters.
+
+display:block -> Block level element bana deta.
+display:inline -> Element ku inline bana deta.
+width & height ❌ work nahi karta
+
+padding left/right ✔️
+
+margin left/right ✔️
+
+margin-top/bottom ❌ (mostly ignore)
+
+display:inline-blockBehaves like inline:
+
+Same line me aa sakta hai
+
+Behaves like block:
+
+width ✔️
+
+height ✔️
+
+margin ✔️
+
+padding ✔️
+
+display: none; element ku hatadeta poore ku uski jagah kuch aajata
+
+position: relative uski relative position se hatane...
+top:10px diye toh uski jagah se 10px top se khisak jaata niche
+position:absolute works wrt the parent.
+z-index works on positioned elements
+
+parent ku dete tum most of the flex ke properties:
+flex-direction is the main column direction
+justify-content works for the main axis.. in the direction of the flex-direction
+
+flex-wrap: wrap; allows the children to take up their full width pushing them to the next lines
+
+matlab agar width nai assign hogi .grow ko aur flex-grow 1 hota toh woh poori width lelega jo dusre element ne chodi hogi what does this do.container { display: flex; } .grow{ flex-grow: 1; }
+
+grid-template-columns: 1fr 1fr 1fr; yeh parent ku dena hai 3 columns banjate
+gap: 30px; in grid gives gap on both sides
+
+grid-column: span 2; given to the child it spans 2 columns of the parent grid
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-template-areas: 
+  "header header header"
+  "sidebar main main";
+}
+
+For grid-template-areas, the number of strings (rows) must match grid-template-rows
+
+background-image:linear-gradient(to bottom right, white,gray, black);
+  
+  
+background-image: radial-gradient(circle, white, black);
+
+box-shadow: offset-x offset-y blur-radius spread-radius color inset;
+box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3) inset;
+text-shadow: offset-x offset-y blur-radius color;
+
+linear gradient can be given to background or background-image
+
+background-size: cover;          /* fill element */
+background-repeat: no-repeat;    /* prevents repeating */
+background-position: center;     /* centers the background */
+
+if you want to make everything trasparent use opacity:0.5
+only the background-color:rgba(,,,0.5)
+
+.fade {
+  opacity: 1;                    /* element is fully visible by default */
+  transition: opacity 0.3s;      /* animate opacity changes over 0.3 seconds */
+}
+
+/* On hover, reduce opacity to fade out */
+.fade:hover {
+  opacity: 0.3;                  /* element becomes partially transparent */
+}
+
+transform: translateX(50px);
+
+.rotate{
+  transform: rotate(45deg);
+}
+
+transform: scale(1.5);
+
+transition: all 0.3 ease;
+
+transition: property duration timing-function delay;
+
+transform: rotate(60deg);
+transform-origin: top left;
+
+changes the origin of rotation which is 50%, 50% by default
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* start fully transparent */
+  }
+  to {
+    opacity: 1; /* end fully visible */
+  }
+}
+
+/* Example usage */
+.fade {
+  opacity: 0; /* initial state */
+  animation: fadeIn 1s forwards; /* 1 second fade-in */
+}
+
+selector {
+  animation: <name> <duration> <timing-function> <delay> <iteration-count> <direction> <fill-mode> <play-state>;
+}
+.. individual properties: animation-name
+animation-duration
+animation-direction (alternate)
+animation-iteration-count
+animation-fill-mode
+
+isi mein agar keyframes mein agar idhar se udhar karna h toh transform kardo lala.
+
+Other animation-fill-mode values
+Value	Effect
+none	Default. Reverts to original styles after animation.
+forwards	Keeps the last keyframe styles.
+backwards	Applies the first keyframe styles during delay.
+both	Combines forwards + backwards.
+
+Feature	Transition	Animation
+Needs trigger	✅ Yes	❌ No
+Runs automatically	❌ No	✅ Yes
+Loop	❌ No	✅ Yes
+
+
+@media media-type and (condition) {
+    /* CSS rules */
+}
+media-type is usually screen
+condition is max-width or min-width
+
+margin: 0 auto and margin: auto are the same
+
+/* Write your CSS here */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width:768px){
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+clamp(MIN, PREFERRED, MAX)
+Think of it like:
+
+“Value ko MIN se chhota mat jaane do,
+MAX se bada mat jaane do,
+beech mein screen ke hisaab se smoothly badhne do.”
+
+❌ Old way (media queries):
+
+p { font-size: 16px; }
+
+@media (min-width: 768px) {
+  p { font-size: 20px; }
+}
+
+@media (min-width: 1200px) {
+  p { font-size: 24px; }
+}
+
+
+✅ New way (clean + modern):
+
+p {
+  font-size: clamp(16px, 4vw, 24px);
+}
+
+max-width: 100%
+What it does
+
+The image will never be wider than its parent container
+
+If the container shrinks, the image shrinks with it
+
+height: auto
+What it does
+
+Height is calculated automatically
+
+Maintains the original aspect ratio of the image
