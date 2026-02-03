@@ -1,0 +1,34 @@
+Button color change is preferred over button size increase on hover as reflow takes up more computation as compared to paint
+
+html does two things, rendering the website and user input
+
+browser only understands html, css and js
+
+Stylesheet is for styling and cascading means to overwrite, so using css we overwrite(not exactly) the user agent stylesheet (browser ki stylesheet)
+
+overwrite matlab sab ku karna 
+cascade matlab jo style likhre, wahi overwrite karta user agent stylesheet ku
+
+Inline css
+<tagname style="prop:value; prop:value">content</tagname>
+<h1 style="color:red;background-color:blue">Hello</h1>
+
+inline css is easy to share and easy to read
+
+Internal Css - inside the file only, hard to share
+<head>
+<style>
+styles come here
+</style>
+</head>
+
+External css
+<link rel="stylesheet" href="style.css"> in <head> tag
+
+internal css comes after external css
+
+multiple classes can have the same element and vice versa (class=class1 class2) but neither of it holds true for id
+
+cascading happens based on (line+priority) -> lower line in case of tie else inline,#,.,element,*
+!important
+

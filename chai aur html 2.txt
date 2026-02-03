@@ -1,0 +1,33 @@
+margin uske andar border uske andar padding uske andar content
+
+margin collapse: agar margin do elements ki collapse hoti toh combine nai hoti higher waali select hoti
+
+content-box only content ki height = given height
+border-box - content+padding+border ki height = given height
+
+position is default by static
+relative generally dete taaki child ku absolute rakh sakna bas
+
+for sticky, it needs a condition like top:100px matlab 100px ke baad ich hota un absolute types behaviour
+
+pseudo class selector (:)
+nth-child,last-child (first as well), first-of-type (last as well), nth-child(odd) (also for even)
+pseudo element selector (::)
+first-line,first-letter,::selection
+p::before, after (cuz content render karne)
+input:focus{
+  background-color:red;
+}
+for required as well (no password entered)
+for checked as well
+article generally independent content ke liye use hota
+
+* REQUIRED EXTENSIONS:
+html css support 
+auto rename tags
+indent rainbow
+prettier
+
+favicon
+
+chore, fix etc are used for commits generally
