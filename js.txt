@@ -1,1 +1,27 @@
 JS is a loosely typed language
+
+let  gets hoisted so tum usku aisa nai use kar sakte ki
+jaise...
+
+age=23;//Let ku tum nai kar sakte basically 
+console.log(age);
+let age=24;
+console.log(age);
+
+let ke liye kaisa h ki like the above example line 8 ke above poora region temporal dead zone h matlab tum usku udhar use nai kar sakte cuz tumaku error aata ki age is not defined but tumaku error aara age is defined but not initialized so iska matlab h hoisting hoti hai par use nai ho sakti
+
+function hello(x){
+  console.log("hello," x)
+}
+uppar ka x parameter hai
+hello('abdullah')
+abdullah argument hai...
+`${x}` -> string interpolation
+
+It can have an expression as well ${num1+num2} -> yeh nahi karna chahiye
+
+in higher order function a function that takes a function as a parameter parameter ka naam kuch bhi rakho argument sahi hona chahiye right.????
+
+for each ek function leta h aur har ek ke liye run karta h 
+
+for each, array ya object ka har ek content pe interate karte huwe uspar ek function run karta h.?
