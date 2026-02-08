@@ -1,0 +1,21 @@
+flex-direction: row, row-reverse, column, column-reverse
+justify-content: start, end, center, space around, space between, space evenly
+
+box-shadow:unset
+align-items:stretch is given to parent if child has no height poore parent pe expand hojata
+
+child ke properties 
+flex:1 uske alawa sab childs ku diye so width dedene ke baad iney poori jagah leleta bachi so 
+khali ek particular element ku cross axis pe adjust karna hai toh usku i mean child ku align-self:end aisa diye toh sabse alag end pe ajata uney
+
+by default order ki value 0 rehti, child ku tum diye order 1 toh uney last ajata
+more order = less priority
+align-items:baseline parent ku dete iska matlab sabka text center mein leke aao 
+
+:root{
+  --color:red;
+  --accent-color: website ka main color;
+}
+while using var(--color)
+
+humesha width ko pehle dedo image ko 

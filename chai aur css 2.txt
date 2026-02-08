@@ -30,4 +30,5 @@ prettier
 
 favicon
 
-chore, fix etc are used for commits generally
+chore, fix, feat etc are used for commits generally
+

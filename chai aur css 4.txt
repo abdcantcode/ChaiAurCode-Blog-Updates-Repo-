@@ -1,0 +1,47 @@
+flex se main axis pe align kar sakte items ku
+flex 1d 
+grid 2d
+
+5 row lines give 4 rows they start from 1
+fr better than px
+
+grid-template-rows
+repeat(3,1fr)
+similarly for columns
+
+for children
+row-template-start:4 bolto 4th row line se start hota end ka bhi do
+similarly for columns as well
+ultha traverse karre lines ku toh -1 se hota
+humesha last row pe rakhna h toh -1 pe rakhdo as row-template-end toh rows add karlo usku faraq nai padhta
+grid-row:1/3 bolto start end ka short hand hai yeh...
+grid-area: rs / cs / re / ce
+grid-area: 1/1/span 2/ span 2 bolto uney agle do leleta highlight
+
+grid-template-areas:"header header";
+"footer footer";
+
+child mein grid-area:header;
+
+min-h-screen best h 
+
+w-full dena bhi acha hai tailwind mein max-w-md bhi use karlo for the same element
+
+focus ku dekho ek baar
+
+sm: smaller and above 
+md: medium and above
+sm:grid-cols-3 bolto small se badoun pe 3 
+agar lekin chote pe bhi 3 chahiye toh grid-cols-3 bhi likhdo saath mein 
+acha mobile first design karo humesha 
+
+but best approach yeh hai ki apne ku equal ka idea hai... grid-cols use karlo 
+unequal ku break the screen into 12 cols and then sm:col-span-jitna dena h 
+
+agar chota karey jab gayab karna h toh sm:block hidden to the child obv
+
+pehle non colon waale read hotey then colon wale read hote
+
+vw -> wrt viewport
+rem bolto body ke hisaab se toh 1 rem= 16 px
+
