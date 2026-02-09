@@ -25,3 +25,5 @@ in higher order function a function that takes a function as a parameter paramet
 for each ek function leta h aur har ek ke liye run karta h 
 
 for each, array ya object ka har ek content pe interate karte huwe uspar ek function run karta h.?
+
+regex patterns dekho 
